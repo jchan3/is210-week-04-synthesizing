@@ -6,11 +6,14 @@
 import decimal
 
 
+ABSOLUTE_DIFFERENCE = decimal.Decimal(273.15)
+
+
 def fahrenheit_to_celsius(degrees):
     """Converts a parameter from Fahrenheit to Celsius.
 
     Args:
-        degrees(decimal): A Fahrenheit variable.
+        degrees(float): A Fahrenheit variable.
 
     Returns:
         decimal: A celsius value.
@@ -22,3 +25,21 @@ def fahrenheit_to_celsius(degrees):
 
     """
     return (((decimal.Decimal(degrees) - 32) * 5) / 9)
+
+
+def celsius_to_kelvin(degrees):
+    """Converts a parameter from Celsius to Kelvin.
+
+    Args:
+        degrees(float): A celsius variable.
+
+    Returns:
+        decimal: A kelvin value.
+
+    Examples:
+
+        >>> celsius_to_kelvin(100)
+        Decimal('373.15')
+
+    """
+    return (ABSOLUTE_DIFFERENCE + degrees)
