@@ -10,7 +10,7 @@ def fahrenheit_to_celsius(degrees):
     """Converts a parameter from Fahrenheit to Celsius.
 
     Args:
-        degrees(int): A Fahrenheit variable.
+        degrees(decimal): A Fahrenheit variable.
 
     Returns:
         decimal: A celsius value.
@@ -21,4 +21,4 @@ def fahrenheit_to_celsius(degrees):
         Decimal('100')
 
     """
-    return decimal.Decimal(((degrees - 32) * 5) / 9)
+    return (((decimal.Decimal(degrees) - 32) * 5) / 9)
